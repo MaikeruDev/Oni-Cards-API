@@ -3,8 +3,11 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 var express = require('express')
 const fs = require('fs');
 const config = require('./config.json')
+var cors = require('cors')
 
 var app = express()
+
+app.use(cors())
 
 const TOKEN = config.token
 
